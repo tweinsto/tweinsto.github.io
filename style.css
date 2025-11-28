@@ -1,14 +1,14 @@
-/* -------- GENERAL STYLE -------- */
+/* ---------- GLOBAL ---------- */
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 
-    /* Animated background */
-    background: linear-gradient(-45deg, #e1e9ff, #f0f4ff, #ffffff);
-    background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    /* Colorful animated gradient background */
+    background: linear-gradient(120deg, #8ab4ff, #c8e1ff, #ffffff, #dcd6ff);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
 
     height: 100vh;
     display: flex;
@@ -16,64 +16,72 @@ body {
     align-items: center;
 }
 
-/* Gradient animation */
-@keyframes gradient {
+@keyframes gradientShift {
     0% {background-position: 0% 50%;}
     50% {background-position: 100% 50%;}
     100% {background-position: 0% 50%;}
 }
 
-/* -------- CONTAINER -------- */
 
-.container {
+/* ---------- MAIN CENTER BOX ---------- */
+
+.center-box {
     text-align: center;
-    padding: 40px;
-    animation: fadein 1.4s ease;
+    animation: fadein 1.3s ease;
 }
 
-/* Fade-in animation */
 @keyframes fadein {
-    from {opacity: 0; transform: translateY(25px);}
+    from {opacity: 0; transform: translateY(20px);}
     to   {opacity: 1; transform: translateY(0);}
 }
 
 .name {
-    font-size: 48px;
+    font-size: 64px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: #1b1b1b;
 }
 
 .contact p {
-    margin: 3px;
-    font-size: 18px;
-}
-
-/* -------- ICON BUTTONS -------- */
-
-.icons {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-}
-
-.icons a {
-    text-decoration: none;
+    margin: 4px;
     font-size: 20px;
-    color: #333;
-    padding: 12px 20px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(6px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
-    transition: 0.25s;
 }
 
-.icons a:hover {
-    transform: scale(1.12);
+.contact a {
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* ---------- CIRCLE ICON BUTTONS ---------- */
+
+.circle-icons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.icon-btn {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 28px;
+    color: #1f1f1f;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+.icon-btn:hover {
+    transform: scale(1.15);
     color: #005eff;
+    background: rgba(255, 255, 255, 0.9);
 }
