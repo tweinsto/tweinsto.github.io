@@ -1,0 +1,79 @@
+/* -------- GENERAL STYLE -------- */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+
+    /* Animated background */
+    background: linear-gradient(-45deg, #e1e9ff, #f0f4ff, #ffffff);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Gradient animation */
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+/* -------- CONTAINER -------- */
+
+.container {
+    text-align: center;
+    padding: 40px;
+    animation: fadein 1.4s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadein {
+    from {opacity: 0; transform: translateY(25px);}
+    to   {opacity: 1; transform: translateY(0);}
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    margin: 3px;
+    font-size: 18px;
+}
+
+/* -------- ICON BUTTONS -------- */
+
+.icons {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.icons a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    padding: 12px 20px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: 0.25s;
+}
+
+.icons a:hover {
+    transform: scale(1.12);
+    color: #005eff;
+}
